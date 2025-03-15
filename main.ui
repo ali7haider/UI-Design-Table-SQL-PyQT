@@ -20,10 +20,6 @@
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
-  <property name="windowIcon">
-   <iconset resource="resources.qrc">
-    <normaloff>:/images/images/images/app_icon.ico</normaloff>:/images/images/images/app_icon.ico</iconset>
-  </property>
   <widget class="QWidget" name="styleSheet">
    <property name="font">
     <font>
@@ -1635,13 +1631,13 @@ font: bold 14pt &quot;Roboto&quot;;</string>
                             <property name="minimumSize">
                              <size>
                               <width>0</width>
-                              <height>125</height>
+                              <height>140</height>
                              </size>
                             </property>
                             <property name="maximumSize">
                              <size>
                               <width>16777215</width>
-                              <height>140</height>
+                              <height>200</height>
                              </size>
                             </property>
                             <property name="frameShape">

@@ -1,11 +1,5 @@
 <RCC>
-  <qresource prefix="images">
-    <file>images/images/app_icon.ico</file>
-    <file>images/images/logo2-removebg-preview.png</file>
-    <file>images/images/logo2.jpeg</file>
-    <file>images/images/Small-logo.ico</file>
-    <file>images/images/logo.png</file>
-  </qresource>
+  <qresource prefix="images"/>
   <qresource prefix="icons">
     <file>images/icons/icons8-expand-arrow-30.png</file>
     <file>images/icons/icons8-search-30.png</file>

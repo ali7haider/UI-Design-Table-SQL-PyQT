@@ -14,7 +14,6 @@ def show_critical_error(message):
 if __name__ == "__main__":
     try:
         app = QApplication(sys.argv)
-        app.setWindowIcon(QIcon(":/images/images/images/app_icon.ico"))
 
 
 
