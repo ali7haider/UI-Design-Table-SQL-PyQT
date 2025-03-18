@@ -80,23 +80,6 @@ class MasterScreen(QtWidgets.QMainWindow):  # Usa la clase generada
         for row, data in enumerate(sample_data):
             for col, value in enumerate(data):
                 self.tableWidget.setItem(row, col, QTableWidgetItem(value))
-
-
-
-    
-
-
-    def set_page(self, idx, clicked_button):
-        """Set the current page and update button styles."""
-        self.stackedWidget_2.setCurrentIndex(idx)
-
-        # Reset the previous button's style
-        if self.active_button:
-            self.active_button.setStyleSheet("")
-
-        # Set underline for the active button
-        clicked_button.setStyleSheet("text-decoration: underline; font-weight: bold;")
-        self.active_button = clicked_button  # Update active button reference
     def show_message_box(self, title, message):
         """Displays a QMessageBox for general errors."""
         msg_box = QMessageBox()
@@ -104,52 +87,6 @@ class MasterScreen(QtWidgets.QMainWindow):  # Usa la clase generada
         msg_box.setWindowTitle(title)
         msg_box.setText(message)
         msg_box.exec_()
-    
-    def init_pages(self):
-        """Initialize backend logic for each page."""
-        # Initialize ConfigSystem logic
-        self.stackedWidget.setCurrentIndex(0)
-
-
-    def show_zoek_menu(self):
-        self.handleMenuClick(self.btnZoek, 0)
-        self.set_page(0, self.btnZoekAfse)
-
-    def show_berek_menu(self):
-        self.handleMenuClick(self.btnBereken,1)
-        self.set_page(3, self.btnVriBerek)
-    def show_documenten_menu(self):
-        self.handleMenuClick(self.btnDocumenten, 2)
-        self.set_page(6, self.btnSijabConen)
-
-    def show_test_menu(self):
-
-        self.handleMenuClick(self.btnWincc,3)
-        self.set_page(9, self.btnWincc)
-
-    def show_offset_leech_menu(self):
-        """Show the Offset Leech page."""
-        # self.current_page = self.offset_leech
-        self.handleMenuClick(self.btnInstellingen, 5)
-    def show_multi_tool_menu(self):
-        """Show the Multi-Tool page."""
-        self.handleMenuClick(self.btnReport, 6)    
-    def handleMenuClick(self, button, page_index):
-        """
-        Handles menu button clicks to update styles and switch pages.
-        """
-        from modules.ui_functions import UIFunctions
-
-        # Deselect all buttons
-        for btn in self.menu_buttons:
-            btn.setStyleSheet(UIFunctions.deselectMenu(btn.styleSheet()))
-
-        # Select the clicked button
-        button.setStyleSheet(UIFunctions.selectMenu(button.styleSheet()))
-
-        # Switch to the selected page
-        self.stackedWidget.setCurrentIndex(page_index)
-
 
     def set_buttons_cursor(self):
         """Set the pointer cursor for all buttons in the UI."""
